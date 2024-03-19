@@ -1,43 +1,32 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en">
 <head>
-    <title>ViaCEP Webservice</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Via-cep</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="style.css">
-
-    <!-- Adicionando JQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
-        </script>
-
-    <!-- Adicionando Javascript -->
-    <script src="main.js"></script>
 </head>
-
 <body>
+    <div class="viacep">
     <!-- Inicio do formulario -->
-    <form method="get">
-        <div class="elementos">
-            <label>Cep: <br>
-                <input name="cep" type="text" id="cep" value="" maxlength="9" /></label><br />
-            <label>Rua: <br>
-                <input name="rua" type="text" id="rua" disabled /></label><br />
-            <label>Bairro: <br>
-                <input name="bairro" type="text" id="bairro" /></label><br />
-            <label>Cidade: <br>
-                <input name="cidade" type="text" id="cidade" disabled /></label><br />
-            <label>Estado: <br>
-                <input name="uf" type="text" id="uf" disabled/></label><br />
-            <label>IBGE: <br>
-                <input name="ibge" type="text" id="ibge" disabled/></label><br />
-            <label>Número: <br>
-                <input name="numero" type="text" id="numero"/></label><br />
-            <div id="botao">
-                <button type="submit"> <a href="https://github.com/Jhuan-Medeiros">enviar</a></button>
-            </div>
-        </div>
-    </form>
-</body>
-
-</html>
+      <form method="get" action=".">
+        <label>Cep:
+        <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+               onblur="pesquisacep(this.value);" /></label><br />
+        <label>Rua:
+        <input name="rua" type="text" id="rua" size="60" /></label><br />
+        <label>Bairro:
+        <input name="bairro" type="text" id="bairro" size="40" /></label><br />
+        <label>Cidade:
+        <input name="cidade" type="text" id="cidade" size="40" /></label><br />
+        <label>Estado:
+        <input name="uf" type="text" id="uf" size="2" /></label><br />
+        <label>IBGE:
+        <input name="ibge" type="text" id="ibge" size="8" /></label><br />
+        <button class="submit">enviar</button>
+      </form>
+    </div>
+    </body>
+    <script src="main.js"></script>
+    </html>
